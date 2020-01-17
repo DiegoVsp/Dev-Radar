@@ -1,3 +1,5 @@
+const {MONGO_USER, MONGO_PASS, MONGO_DB} =  require('../.env');
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -5,7 +7,7 @@ const routes = require('./routes');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://omnistack:220991@cluster0-k9t9y.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://${MONGO_USER}:${MONGO_PASS}@cluster0-k9t9y.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

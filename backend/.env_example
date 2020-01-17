@@ -1,0 +1,5 @@
+module.exports = {
+    MONGO_USER: "usuario_do_mongo",
+    MONGO_PASS: "senha_do_mongo",
+    MONGO_DB: "banco_de_dados_do_mongo",
+}
