@@ -33,9 +33,12 @@ function Main({navigation}) {
         }
         loadInitialPosition();
     }, []);
+
     async function loadDevs() {
         const { latitude, longitude } = currentRegion;
+
         
+
         const response = await api.get('/search', {
             params: {
                 latitude,
@@ -44,6 +47,7 @@ function Main({navigation}) {
             }
         });
         setDevs(response.data.devs);
+        
     }
     function handleRegionChanged(region) {   
       

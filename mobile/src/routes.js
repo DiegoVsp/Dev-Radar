@@ -9,6 +9,7 @@ const Routes = createAppContainer(
         Main: {
             screen: Main,
             navigationOptions: {
+                headerTitleAlign: 'center',// centralizar titulo ao centro
                 title: 'DevRadar'
             },
         },
